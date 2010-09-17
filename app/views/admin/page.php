@@ -1,0 +1,1 @@
+<span style="float:right;"><?php echo $this->pagination->create_links();?></span>

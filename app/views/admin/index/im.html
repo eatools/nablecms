@@ -1,0 +1,46 @@
+{% include 'header.html' %}
+<table width=100% cellpadding="0" cellspacing=0 border=0>
+    <tr>
+    <td width="33%" valign="top">
+    
+    <dl>
+    <dt>用户信息 <a href="{% url consumer_change_info %}"><img style="border:0px;" src="/media/images/edit.png" ></a></dt>
+    <dd>用户昵称：{{consumer.nickname}}</dd>
+    <dd>邮箱地址：{{consumer.mail}}</dd>
+    <dd>最后登录：{{consumer.logintime}}</dd>
+    <dd>登录地址：{{consumer.loginip}}</dd>
+    </dl>
+    
+    
+    </td>
+    <td width="33%" valign="top">
+<dl>
+    <dt><a href="/projects/"><B>项目</b></a></dt>
+    <dd>项目...........</dd>
+</dl>
+
+
+<dl>
+    <dt><a href="/groups/"><B>讨论组</b></a></dt>
+    <dd>讨论组...........</dd>
+</dl>
+
+<dl>
+    <dt><a href="/notebook/"><B>日记</b></a></dt>
+    <dd>个人日记...........</dd>
+</dl>
+
+    
+    </td>
+    <td width="33%" valign="top">
+    <dl>
+    <dt><a href="/chat/online/"><B>在线好友[测试聊天功能]</b></a></dt>
+    <dd></dd>
+</dl>
+    
+    </td>
+    </tr>
+</table>
+
+
+{% include 'footer.html' %}

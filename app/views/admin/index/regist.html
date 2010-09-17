@@ -1,0 +1,44 @@
+{% include 'head.html' %}
+<style>
+.textinput{border:1px solid #999999;width:160px;}
+</style>
+<br/>
+<br/>
+<br/>
+<center>
+    <table width="600" height=60% align="center">
+        <tr>
+           <td valign="top" >
+                  <img alt="EaProject" src="/media/images/logo.png" > [用户注册]
+            <br/>
+             
+             <form name="registform" id="registform" action="./" method="POST" onsubmit="return login_form(this);"> 
+            <dl>
+                <dd>登录名称：<input type="text" class="textinput" name="username" ><br><i>(大于等于5位的任意字符)</i></dd>
+                <dd>用户称呼：<input type="text" class="textinput" name="nickname" ><br><i>(大于等于5位的任意字符)</i></dd>
+
+                <dd>登录密码：<input type="password" class="textinput" name="pass" ><br><i>(大于5位的任意字符)</i></dd>
+                <dd>确认密码：<input class="textinput" type="password" name="dbpass" ><br><i>(请与登录密码保持一致！)</i></dd>
+                <dd>mail：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textinput" name="mail" ><br><i>(用于找回密码胡用户邮箱！)</i></dd>
+                <br>
+                <dd>验证码：<input class="textinput" style="width:60px;" type="text" name="checkcode" > <img style="cursor:pointer;" src="/consumer/get_check_code_image/" onclick="
+        var d = new Date();
+        this.src = '/consumer/get_check_code_image/?time='+d.getTime();
+    "></dd>
+                <dd><input type="submit" value="注册" ></dd>
+            </dl>
+
+            </form>
+           </td>
+
+            <td valign="top" align="left" width=250 style="padding-left:20px;border-left:1px solid #336699;" >
+                {% include 'consumer/_loginpage.html'%}
+               
+            </td>
+               
+        </tr>
+    
+    </table>
+
+</center>
+{% include 'footer.html' %}

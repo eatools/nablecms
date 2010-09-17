@@ -1,0 +1,16 @@
+  <script type="text/javascript" src="<?=base_url()?>media/js/login_form.js"></script>
+  <form name="form1" id="form1" action="{% url consumer_login %}" method="POST" onsubmit="return login_form(this);"> 
+<dl>
+    <dt>用户名：<input  class="textinput" type="text" name="username" ></dt>
+    
+    <dt>密&nbsp;&nbsp;&nbsp;码：<input class="textinput" type="password" name="pass" ></dt>
+    <dt>
+    <table border=0 cellpadding=0 cellspacing=0 ><tr><td>验证码：</td>
+    <td><input class="textinput" style="width:60px;" type="text" name="checkcode" ></td>
+    <td >&nbsp;<span onclick="set_check_codes()" id="checkcode_box" style="cursor:pointer;"><u>获取验证码</u></span></td>
+    </tr></table>
+    
+    </dt>
+    <dt><input type="submit" value="登录" > <input onclick="location.href='{% url consumer_regist %}'" type="button" value="注册" ></dt>
+</dl>
+</form>

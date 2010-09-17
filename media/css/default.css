@@ -1,0 +1,55 @@
+body,html{
+width:100%;height:100%;
+font-size:12px;
+margin:0px 0px;
+background:#ffffff;
+font-family:Tahoma,Verdana,STHeiTi,simsun,sans-serif,Courier New;
+}
+dl{line-height:24px;}
+dl dt{margin:4px;font-weight:bold;color:#3366dd;}
+dl dd{margin-left:20px;font-size:12px;}
+a {color:#0000ff;cursor:pointer; text-decoration: none ;}
+a:hover{color:#ff0000;}
+
+textarea {font-size:12px;}
+
+.hide{}
+.table{color:#444444;}
+.table .title{background:#ffffff;padding:4px;font-weight:bold;}
+.table tr {}
+.table tr th {background:#deeaf8;padding:6px;}
+.table tr td {padding:4px;border:1px solid #deeaf8;}
+#load_message img { vertical-align:middle ;margin:2px;}
+.layoutCss {
+    width:100%;
+}
+.layoutCss .header{border-bottom:3px solid #4c94ea; height:60px;background:url('../images/bg.jpg');}
+           .header .header_right {float:right;margin:0 5px;color:#45649e;}
+           .header_right a{color:#45649e;}
+    
+
+.layoutCss .menu3{border-left:1px solid #4c94ea;width:200px;}
+.layoutCss .menu3 .menu3_top{margin:3px  0 0 10px;height:20px;}
+.layoutCss .menu3 .menu3_top div{float:left;text-align:right;border:1px solid #00000;}
+           .menu3 #menu3 a{margin-left:19px;line-height:21px;color:#336699;}
+                  #menu3 a:hover{margin-left:19px;line-height:21px;color:#ffffff;background:#ff0000; }
+
+.layoutCss .main{padding:4px;}
+.layoutCss .footer{border-top:3px solid #4c94ea;height:30px;}
+           .main .main_mian{height:100%;width:100%;padding:10px 0 0 ;}
+           .main .but{ margin:0 0 0 4px;}
+.labelCss {border-top:1px solid #4c94ea;background:#deeaf8;height:25px;}
+.labelCss div{margin:3px 0 0 3px;padding:0 4px;float:left;height:22px;line-height:22px;color:#333333;cursor:pointer;}
+.labelCss .open{background:#ffffff;font-weight:bold;}
+          .labelsBut {float:left;}
+
+.edit_icon{background:url('../images/icon.gif') no-repeat 0px -237px;padding-left:17px;}
+.exit_button{background:transparent url(../images/icon.gif) no-repeat -207px -746px;padding-left:17px;}
+.create_icon{background:transparent url(../images/icon.gif) no-repeat -545px -775px;padding-left:17px;}
+
+
+.MouseOverCss{background:#efefef;}
+
+.tr_bg td{}
+
+#mess{float:left;}

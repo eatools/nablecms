@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+
+<form name="registform" id="registform" action="./" method="POST" onsubmit="
+    try{
+        load_div.loading();
+        if(isNickname(this.nickname.value) ){
+            load_div.setHTML('用户称呼格式不正确！');
+        }
+        if(Utils.isEmail(this.mail.value)!='false'){
+            load_div.setHTML('邮箱地址格式错误！');
+        }
+        FormRequest(this);
+        return false;
+    }catch(e){
+        return false;
+    }
+"> 
+<dl>
+    <dt>修改个人信息</dt>
+    <dd>用户称呼：<input type="text" class="textinput" name="nickname" value="{{consumer_info.nickname}}"><br><i>(大于等于5位的任意字符)</i></dd>
+
+    <dd>登录密码：<input type="password" class="textinput" name="pass" ><br><i>(大于5位的任意字符)</i></dd>
+    <dd>确认密码：<input class="textinput" type="password" name="dbpass" ><br><i>(请与登录密码保持一致！)</i></dd>
+    <dd>mail：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textinput" name="mail"   value="{{consumer_info.mail}}"><br><i>(用于找回密码胡用户邮箱！)</i></dd>
+    <br>
+    <dd><input type="submit" value="修改" ></dd>
+</dl>
+
+</form>
+
+{% include 'footer.html' %}
