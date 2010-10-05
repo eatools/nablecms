@@ -3,8 +3,6 @@
  <tr>
     <th width="30">编号</th>
     <th  >标题</th>
-    <th>作者</th>
-    <th>发布时间</th>
     <th  width="30">状态</th>
     <th>操作</th>
  </tr>
@@ -13,16 +11,11 @@
 
 <tr class="tr_bg" >
     <td><?php echo $row->id ?></td>
-    <td><?php echo $row->title ?></td>
-    <td><?php echo $row->author?></td>
-
-    <td><?php echo date('Y-m-d H:i:s',$row->create_time)?></td>
-    <td><?php echo ($row->is_del==1)?'禁用':'启用' ?></td>
+    <td title="最后修改时间:<?php echo date('Y-m-d H:i:s',$row->create_time)?><br/>作者:<?php echo $row->author?>"><?php echo $row->title ?></td>
+    <td><?php echo admin_static(($row->is_del==1)?0:1)?></td>
 
     <td>
-    <?php echo anchor(ADMIN_ROUTES.'/news/edit/'.$row->id,'修改')?> 
-
-    <?php echo anchor(ADMIN_ROUTES.'/news/delete/'.$row->id,'删除')?>
+    <?php echo admin_list_button("news",'ed',$row->id)?>
     </td>
  </tr>
 <?php endforeach; ?>

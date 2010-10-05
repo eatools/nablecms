@@ -106,7 +106,9 @@ class Admin_Controller extends EA_Controller{
         }
 
         //设置默认类
-        if($this->defaultModel!='') $this->load->model($this->defaultModel,'model');
+        
+        if($this->defaultModel!='' ) $this->load->model($this->defaultModel,'model');
+        $this->load->helper("admin_helper");
         
 	}
     
@@ -237,7 +239,7 @@ class Admin_Controller extends EA_Controller{
     	}
         else 
         {
-        	$this->_view(array('postpage',true),$ret);
+        	$this->_view(array('admin/postpage',true),$ret);
         }
     }
 }

@@ -15,7 +15,7 @@
     <td><?php echo $row->ext ?></td>
     <td><?php echo date("Y-m-d H:i:s",$row->create_time)?></td>
     <td align="center">
- <?php echo anchor(ADMIN_ROUTES.'/files/delete/'.$row->id,'删除')?></td>
+ <?php echo admin_list_button("files",'d',$row->id)?></td>
  </tr>
 <?php endforeach; ?>
 </table>

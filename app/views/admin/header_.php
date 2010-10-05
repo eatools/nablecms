@@ -13,6 +13,8 @@ var base_url = "<?php echo base_url()?>";
 </script>
 <script type="text/javascript" src="<?php echo base_url()?>media/js/prototype/lib/prototype.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>media/js/prototype/lib/src/effects.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>media/js/prototype/lib/srcelement.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>media/js/prototype/lib/x_alt.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>media/js/prototype/loadmess.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>media/js/prototype/func.js"></script>
 </head>

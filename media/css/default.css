@@ -10,6 +10,7 @@ dl dt{margin:4px;font-weight:bold;color:#3366dd;}
 dl dd{margin-left:20px;font-size:12px;}
 a {color:#0000ff;cursor:pointer; text-decoration: none ;}
 a:hover{color:#ff0000;}
+a img {border:0;}
 
 textarea {font-size:12px;}
 

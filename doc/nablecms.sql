@@ -103,10 +103,6 @@ INSERT INTO `ea_admin_menu` (`id`, `pid`, `title`, `url`, `is_param`, `is_del`, 
 (27, 24, '模块修改', 'sitemodule/edit', 1, 0, 7, 1272644109, 1272644109, 1),
 (28, 24, '模块删除', 'sitemodule/delete', 1, 0, 0, 1272644206, 1272644206, 1),
 (29, 10, '权限分配', 'role/checkjur', 1, 0, 0, 1272699916, 1272699945, 1),
-(30, 23, '模版列表', 'sitelayout/index', 0, 0, 90, 1272702305, 1272804994, 1),
-(31, 23, '模版添加', 'sitelayout/add', 0, 0, 80, 1272702316, 1272805008, 1),
-(32, 23, '模版修改', 'sitelayout/edit', 1, 0, 70, 1272702328, 1272805018, 1),
-(33, 23, '删除模版', 'sitelayout/delete', 1, 0, 60, 1272702339, 1272805029, 1),
 (34, 22, '功能模块', '', 0, 0, 0, 1272790779, 1272790779, 1),
 (35, 34, '模块列表', 'sitemodule/index', 0, 0, 99, 1272790871, 1272790871, 1),
 (36, 34, '模块添加', 'sitemodule/add', 0, 0, 90, 1272790888, 1272790888, 1),
@@ -397,32 +393,6 @@ INSERT INTO `ea_server_ftp` (`User`, `status`, `Password`, `Uid`, `Gid`, `Dir`, 
 
 -- --------------------------------------------------------
 
---
--- 表的结构 `ea_site_layout`
---
-
-CREATE TABLE IF NOT EXISTS `ea_site_layout` (
-  `layout_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
-  `title` varchar(255) DEFAULT NULL COMMENT 'title标签名称',
-  `tpl` varchar(100) DEFAULT NULL COMMENT '模版文件名',
-  `admin_module` varchar(100) DEFAULT '' COMMENT '后台管理模块',
-  `module` text NOT NULL COMMENT '模块信息',
-  `is_del` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有效',
-  `edit_time` int(11) NOT NULL DEFAULT '0' COMMENT '最后修改时间',
-  `account_id` int(11) NOT NULL COMMENT '修改人',
-  PRIMARY KEY (`layout_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='网站页面表' AUTO_INCREMENT=7 ;
-
---
--- 转存表中的数据 `ea_site_layout`
---
-
-INSERT INTO `ea_site_layout` (`layout_id`, `title`, `tpl`, `admin_module`, `module`, `is_del`, `edit_time`, `account_id`) VALUES
-(3, '首页布局', 'header;index;footer', 'news', 'page_model.getTop\nlinks_model.getList|''title,url,target''\nnews_model.get_page_list|$pageInfo->id,"id,title,content,create_time"|news_list', 0, 1274460059, 1),
-(5, '新闻含內容列表', 'header;news;footer', 'news', 'page_model.getTop\nlinks_model.getList|''title,url,target''\nnews_model.get_page_list|$pageInfo->id,"id,title,content,create_time"|news_list', 0, 1274373536, 1),
-(6, 'sitemap', 'sitemap', '', 'page_model.get_list|null|list', 0, 1273686953, 1);
-
--- --------------------------------------------------------
 
 --
 -- 表的结构 `ea_site_module`
@@ -500,3 +470,34 @@ CREATE TABLE IF NOT EXISTS `ea_site_theme` (
 
 INSERT INTO `ea_site_theme` (`seq`, `theme`) VALUES
 (1, 'simple_eatools');
+
+
+
+--
+-- 配置管理表 , 2010.9.20 Able
+--
+
+CREATE TABLE IF NOT EXISTS `ea_configure` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自动编号',
+  `title` varchar(30) NOT NULL COMMENT '标题',
+  `code` varchar(30) NOT NULL COMMENT '编码',
+  `value` text NOT NULL COMMENT '数据',
+  PRIMARY KEY (`id`),
+  KEY `code` (`code`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='系统配置表' AUTO_INCREMENT=2 ;
+
+
+
+--
+-- 转存表中的数据 `ea_configure`
+--
+
+INSERT INTO `ea_configure` (`id`, `title`, `code`, `value`) VALUES
+(1, '默认主题', 'DEFAULT_THEME', 'default');
+
+--
+-- 删除 site_layout表
+--
+-- DROP TABLE `ea_site_layout`;
+
+

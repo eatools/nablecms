@@ -81,11 +81,7 @@
 
 </tr>
 
-<tr class="tr_bg">
-	<Td>前台缓存目录</td>
-	<td><?php echo PAGE_CACHE_PATH?></td>
-	<td><?php echo is_writable(PAGE_CACHE_PATH)?'<font color="#0000ff">可写</font>':'<font color="#ff0000">不可写</font>'?></td>
-</tr>
+
 
 </table>
 

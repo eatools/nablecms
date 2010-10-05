@@ -7,7 +7,7 @@
     <th>缓存时间</th>
     <th>模版</th>
     <th>排序</th>
-    <th>状态</th>
+    <th>有效</th>
 
     <th>操作</th>
  </tr>
@@ -26,13 +26,12 @@
                     ?></td>
     <td><?php echo $row->orderby ?></td>
     <td align="center">
-    <?php echo ($row->is_del==0)?'显示' : '隐藏'?>
+    <?php echo admin_static(($row->is_del==1)?0:1)?>
     </td>
     <td align="center">
  <?php echo anchor(base_url().'index.php/'.$row->uri,'预览',' target="_blank" ')?>
-  <?php echo anchor(ADMIN_ROUTES.'/sitepage/add/'.$row->id,'添加')?>
- <?php echo anchor(ADMIN_ROUTES.'/sitepage/edit/'.$row->id,'修改')?>
- <?php echo anchor(ADMIN_ROUTES.'/sitepage/delete/'.$row->id,'删除')?></td>
+<?php echo admin_list_button("sitepage",'aed',$row->id)?>
+</td>
  </tr>
 <?php endforeach; ?>
 </table>

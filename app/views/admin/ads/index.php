@@ -19,8 +19,8 @@
     <td><?php echo $row->files ?></td>
     <td><?php echo $row->links ?></td>
     <td align="center">
- <?php echo anchor(ADMIN_ROUTES.'/ads/edit/'.$row->id,'修改')?>
- <?php echo anchor(ADMIN_ROUTES.'/ads/delete/'.$row->id,'删除')?></td>
+<?php echo admin_list_button("ads",'ed',$row->id)?>
+</td>
  </tr>
 <?php endforeach; ?>
 </table>

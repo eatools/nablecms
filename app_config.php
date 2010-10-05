@@ -1,6 +1,6 @@
 <?php
 //网站地址
-define('EA_BASE_URL',       'http://'.$_SERVER['HTTP_HOST'].'/nablecms/trunk/');
+define('EA_BASE_URL',       'http://'.$_SERVER['HTTP_HOST'].'/nablecms/');
 //网站名称
 define('EA_WEB_NAME',       'NableCms');
 
@@ -19,6 +19,7 @@ define('THEMEPATH',        'theme/'); #主题路径
 
 define('MEDIAPATH','media/');
 define('JSPATH',MEDIAPATH.'/js');
+define('IMGPATH',MEDIAPATH.'/images');
 
 
 #管理入口路由地址

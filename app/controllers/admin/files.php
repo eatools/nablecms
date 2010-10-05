@@ -20,9 +20,12 @@ class files extends Admin_Controller
                            'add'  =>array('admin/files/add',true),
                            'pluginadd'  =>array('admin/files/pluginadd',true)
                            );
-    protected $type =array('图片','视频','文件');
-    public $filepath ='' ;
     protected $defaultModel ='Files_Model';
+
+    protected $type =array('图片','视频','文件');
+
+    public $filepath ='' ;
+    
     public function __construct()
     {
         //指定默认模块
