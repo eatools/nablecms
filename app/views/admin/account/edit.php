@@ -52,7 +52,7 @@ return false;
 </form>
 
 <br/>
-<form method="POST" name="form2" action="<?php echo site_url('account/changepass')?>" onsubmit="try{
+<form method="POST" name="form2" action="<?php echo site_url(ADMIN_ROUTES.'/account/changepass')?>" onsubmit="try{
 if(this.passwd.value=='' || this.dbpasswd.value=='' || this.passwd.value!=this.dbpasswd.value)
 {
     alert('密码格式错误或者两次密码不相同！');
@@ -89,7 +89,7 @@ return false;
 
 
 
-<form method="POST" name="form3" action="<?php echo site_url('account/checkrole')?>" onsubmit="try{
+<form method="POST" name="form3" action="<?php echo site_url(ADMIN_ROUTES.'/account/checkrole')?>" onsubmit="try{
 
 FormRequest(this);
 return false;
@@ -105,11 +105,14 @@ return false;
     <td>
         <?php
             //$info
-            
-        ?>
+            if(is_array($role_list)):
+            ?>
         <?php foreach($role_list as $item):?>
             <input type="checkbox" name="role_id[]" value="<?php echo $item->role_id?>"> <?php echo $item->title?>
-        <?php endforeach;?>
+        <?php endforeach; ?>
+        <?php else: ?>
+           没有有效角色
+        <?php endif; ?>
     </td>
 </tr>
 

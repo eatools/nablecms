@@ -105,8 +105,7 @@ class Admin_Controller extends EA_Controller{
             redirect(site_url(ADMIN_ROUTES."/index/notaccess"));
         }
 
-        //设置默认类
-        
+        //设置默认模型载入。
         if($this->defaultModel!='' ) $this->load->model($this->defaultModel,'model');
         $this->load->helper("admin_helper");
         

@@ -14,7 +14,7 @@
 
 class Admin_Account_Model extends EA_Model
 {
-    protected $TableName  =   'admin_account';
+    public $TableName  =   'admin_account';
     public $pk = 'account_id';
     public function __construct()
     {

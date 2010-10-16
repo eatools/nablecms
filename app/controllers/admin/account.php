@@ -54,7 +54,8 @@ class account extends Admin_Controller
     //修改信息
     public function beforeEdit()
     {
-        return $this->roleList();
+
+         $this->load->vars($this->roleList());
     }
 
     //生成角色列表<BR>

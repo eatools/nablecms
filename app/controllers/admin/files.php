@@ -1,7 +1,7 @@
 <?php
 
 /*
- * 广告信息管理
+ * 文件信息管理
  *=============================================================
  * 版权所有: (c) eatools.cn Able Gao 保留所有权利
  * 网站地址: http://www.eatools.cn
@@ -38,7 +38,7 @@ class files extends Admin_Controller
             if(!is_dir($this->filepath)) mkdir($this->filepath);
         }
 	}
-	
+	//添加文件
 	public function add()
 	{
 		if($this->input->isPOST())

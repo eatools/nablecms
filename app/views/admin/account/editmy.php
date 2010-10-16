@@ -31,7 +31,7 @@ return false;
 </form>
 
 <br/>
-<form method="POST" name="form2" action="<?php echo site_url('account/changepassofmy')?>" onsubmit="try{
+<form method="POST" name="form2" action="<?php echo site_url(ADMIN_ROUTES.'/account/changepassofmy')?>" onsubmit="try{
 if(this.oldpasswd.value=='' || this.passwd.value=='' || this.dbpasswd.value=='' || this.passwd.value!=this.dbpasswd.value)
 {
     alert('密码格式错误或者两次密码不相同！');
